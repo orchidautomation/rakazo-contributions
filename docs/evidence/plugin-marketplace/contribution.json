@@ -1,0 +1,79 @@
+{
+  "schema": "orchid.work.contribution-report/v1",
+  "repository": "orchidautomation/rakazo-contributions",
+  "baseRepository": "elie222/rakazo",
+  "candidate": "c262060b54e21662b939303f94f1b3f8001e6471",
+  "branch": "codex/upstream-plugin-marketplace",
+  "baseline": "381c4ed774ae1b5153fa021eac261c06b94219b8",
+  "baseCommit": "aa38668880826113651c441fdd9b5b199cf85809",
+  "baseBranch": "main",
+  "commits": [
+    "c262060b54e21662b939303f94f1b3f8001e6471"
+  ],
+  "checks": [
+    {
+      "name": "unit",
+      "status": "passed",
+      "passed": 10012,
+      "skipped": 287,
+      "environment": "PID-isolated Linux runner with child reaping; namespace-root permission coverage additionally run as ordinary user"
+    },
+    {
+      "name": "ordinary-user process and home regression",
+      "status": "passed",
+      "passed": 52,
+      "skipped": 1
+    },
+    {
+      "name": "PostgreSQL integration",
+      "status": "passed",
+      "passed": 211,
+      "suites": 31,
+      "environment": "disposable Testcontainers databases"
+    },
+    {
+      "name": "typecheck",
+      "status": "passed",
+      "tasks": 22
+    },
+    {
+      "name": "lint",
+      "status": "passed",
+      "note": "Existing repository diagnostics remain"
+    },
+    {
+      "name": "production builds",
+      "status": "passed",
+      "tasks": 5
+    },
+    {
+      "name": "Marketplace browser journeys",
+      "status": "passed",
+      "passed": 2
+    },
+    {
+      "name": "full browser suite",
+      "status": "failed",
+      "passed": 259,
+      "failed": 1,
+      "workers": 2,
+      "failure": "Unchanged avatar-motion animation-transform comparison returned the same transform after a fixed wait"
+    },
+    {
+      "name": "isolated avatar-motion rerun",
+      "status": "passed",
+      "passed": 2,
+      "sourceChanges": false
+    }
+  ],
+  "review": {
+    "kind": "self-review",
+    "scope": "Feature-only diff, actor ownership, secret handling, pinned/digest-confirmed acquisition, fixed OAuth return intent, explicit bot assignment, migration and synthetic screenshots",
+    "blockingCodeFindings": [],
+    "humanReview": "pending"
+  },
+  "remainingVerification": [
+    "Upstream CI and maintainer review",
+    "Resolve or assess full-suite avatar timing failure; isolated rerun alone is not a green full-suite invocation"
+  ]
+}
